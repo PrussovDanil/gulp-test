@@ -1,6 +1,1 @@
-body {
-  background-color: black;
-}
-body span {
-  color: red;
-}
+body{background-color:#000}body span{color:red}.no-webp .webp body{background:url(../img/tom.jpg) 0 0 no-repeat}@media (max-width:768px){span{font-size:20px}body{background-color:#faebd7}}.webp .webp body{background:url(../img/tom.webp) 0 0 no-repeat}
