@@ -12,7 +12,7 @@ export const path= {
     files: `${buildFolder}/files/`,
   },
   src:{
-    scss: `${srcFolder}/scss/styles/*.scss`,
+    scss: `${srcFolder}/scss/styles.scss`,
     html: `${srcFolder}/*.html`,//pug
     files: `${srcFolder}/files/**/*.*`,
   },
