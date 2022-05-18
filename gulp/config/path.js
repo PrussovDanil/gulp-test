@@ -10,15 +10,18 @@ export const path= {
     js: `${buildFolder}/js/`,
     css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
-    image: `${buildFolder}/img/`,
+    images: `${buildFolder}/img/`,
+    fronts: `${buildFolder}/fonts/`,
     files: `${buildFolder}/files/`,
   },
   src:{
     js: `${srcFolder}/js/*.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+    svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/scss/styles.scss`,
     html: `${srcFolder}/*.html`,//pug
     files: `${srcFolder}/files/**/*.*`,
+    svgicons: `${srcFolder}/svgicons/*.svg`,
   },
   watch:{
     js: `${srcFolder}/js/**/*.js`,
@@ -31,6 +34,6 @@ export const path= {
   buildFolder: buildFolder,
   srcdFolder: srcFolder,
   rootFolder: rootFolder,
-  ftp:``
+  ftp:`test`
 }
 

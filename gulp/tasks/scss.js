@@ -11,7 +11,7 @@ import groupCssMediaQueries from 'gulp-group-css-media-queries';//Групиро
 const sass = gulpSass(dartSass);
 
 export const scss = () => {
-  return app.gulp.src(app.path.src.scss, {sourcemaps: true})
+  return app.gulp.src(app.path.src.scss, {sourcemaps: app.isDev})
   .pipe(app.plugin.plumber(
     app.plugin.notify.onError({
       title:"SCSS",
@@ -22,23 +22,42 @@ export const scss = () => {
   .pipe(sass({
     outputStyle: 'expanded'
   }))
-  .pipe(groupCssMediaQueries())
-  .pipe(webpcss(
-    {
-      webpClass: ".webp",
-      noWebpClass: ".no-webp"
-    }
+  .pipe(
+    app.plugin.if(
+      app.isBuild,
+      groupCssMediaQueries()
   ))
-  .pipe(autoprefixer({
-    grid:true,
-    overredeBrowserlist:["last 3 versions"],
-    cascade: true
-  }))
-  .pipe(app.gulp.dest(app.path.build.css))//если нужен не сжатый файл
-  .pipe(cleanCss())
+  .pipe(
+    app.plugin.if(
+      app.isBuild,
+      webpcss(
+        {
+          webpClass: ".webp",
+          noWebpClass: ".no-webp"
+        }
+      )
+  ))
+  .pipe(
+    app.plugin.if(
+      app.isBuild,
+      autoprefixer({
+        grid:true,
+        overredeBrowserlist:["last 3 versions"],
+        cascade: true
+      })
+  ))
+  //.pipe(app.gulp.dest(app.path.build.css))//если нужен не сжатый файл
+  .pipe(
+    app.plugin.if(
+      app.isBuild,
+      cleanCss()
+  ))
   .pipe(rename({
     extname: ".min.css"
   }))
   .pipe(app.gulp.dest(app.path.build.css))//Результат 
   .pipe(app.plugin.browsersyns.stream());//SERVER
 }
+
+
+

@@ -1,1 +1,21 @@
-body{background-color:#000}body span{color:red}.no-webp .webp body{background:url(../img/tom.jpg) 0 0 no-repeat}@media (max-width:768px){span{font-size:20px}body{background-color:#faebd7}}.webp .webp body{background:url(../img/tom.webp) 0 0 no-repeat}
+body {
+  background: #c7b39b url("../img/tom.jpg") 0 0 no-repeat;
+}
+body span {
+  color: red;
+}
+
+.webp body {
+  background: url(../img/tom.jpg) 0 0 no-repeat;
+}
+
+@media (max-width: 768px) {
+  span {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-color: antiquewhite;
+  }
+}

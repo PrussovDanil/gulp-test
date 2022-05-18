@@ -10,26 +10,37 @@ import pug from "gulp-pug";
       message: "Error:<%= error.message %>"
     })
   ))
-  .pipe(pug({
-    pretty: true,//Сжатие Html
-    verbose: true//Показывать в терминалк какой файл обраьотан 
-  }))
+  // .pipe(pug({
+  //   pretty: true,//Сжатие Html
+  //   verbose: true//Показывать в терминалк какой файл обраьотан 
+  // }))
   .pipe(app.plugin.replace(/@img\//g, 'img/'))
-  .pipe(webpHtmlNosvg())
-  .pipe(versionNumber({
-    'value': '%DT%',
-    'append': {
-      'key': '_v',
-      'cover' : 0,
-      'to':[
-        'css',
-        'js',
-      ]
-    },
-    'output':{
-      'file': 'gulp/version.json'
-    }
-  }))
+  .pipe(
+    app.plugin.if(
+      app.isBuild,
+      webpHtmlNosvg()
+      )
+    )
+  .pipe(
+    app.plugin.if(
+    
+      app.isBuild,
+    
+      versionNumber({
+      'value': '%DT%',
+      'append': {
+        'key': '_v',
+        'cover' : 0,
+        'to':[
+          'css',
+          'js',
+        ]
+      },
+      'output':{
+        'file': 'gulp/version.json'
+      }
+    })
+    )) 
   .pipe(app.gulp.dest(app.path.build.html))
   .pipe(app.plugin.browsersyns.stream());
 }
