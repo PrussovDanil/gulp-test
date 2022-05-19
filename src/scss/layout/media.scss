@@ -1,0 +1,23 @@
+@mixin tablets {
+  @media screen and (max-width:$tablets) {
+    @content;
+  }
+}
+
+
+
+@mixin phones {
+  @media screen and (max-width:$phones) {
+    @content;
+  }
+}
+
+
+html{
+  @include tablets{
+    font-size: $baseFontSize ;
+  }
+  @include phones{
+    font-size: $baseFontSize;
+  }
+}

@@ -1,18 +1,20 @@
-body {
-  background: #c7b39b url('@img/tom.jpg') 0 0 no-repeat;
-  span{
-    color: red;
-  }
-}
-.webp body {background: url(../img/tom.jpg) 0 0 no-repeat;}
+$containerWidth:940px;
+$baseFontSize:16px;
 
-@media (max-width: 768px){
-  span{
-    font-size: 20px;
-  }
-}
-@media (max-width: 768px){
-  body{
-    background-color:antiquewhite;
-  }
-}
+$z-fixed-menu:100;
+
+$mainColor:#E01F3D;
+
+//breakpionts
+
+$tablets: 768px;
+$phones: 480px;
+
+
+//layout
+@import './layout/normalize.scss';
+@import './layout/base.scss';
+@import './layout/media.scss';
+//block
+@import './block/header.scss';
+@import './block/footer.scss';

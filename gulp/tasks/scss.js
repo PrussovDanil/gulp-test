@@ -6,6 +6,7 @@ import cleanCss from 'gulp-clean-css';//Сжатие CSS
 import webpcss from 'gulp-webpcss';//Вывод WEBP Изображений 
 import autoprefixer from 'gulp-autoprefixer';//Добавление вендорных префиксов 
 import groupCssMediaQueries from 'gulp-group-css-media-queries';//Групировка медта запростов 
+import rempx from "gulp-px2rem-converter"
 
 
 const sass = gulpSass(dartSass);
@@ -52,6 +53,7 @@ export const scss = () => {
       app.isBuild,
       cleanCss()
   ))
+  .pipe(rempx())
   .pipe(rename({
     extname: ".min.css"
   }))

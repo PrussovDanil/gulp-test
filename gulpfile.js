@@ -42,19 +42,19 @@ export {svgSprive}
 //шрифты
 const fonts = gulp.series(otfToTtf,ttfToWoff)
 //основные задачи 
-const mainTasks = gulp.parallel(fonts,copy,html,scss,js,images);
+const mainTasks = gulp.parallel(fonts,copy,html,scss,js,images,svgSprive);
 
 //Построение сценариев выполнение задач
 const dev = gulp.series(reset,mainTasks,gulp.parallel(watcher,server));
 const build = gulp.series(reset,mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
-const ftp = gulp.series(reset, mainTasks, ftp);
+// const ftp = gulp.series(reset, mainTasks, ftp);
 
 //Экспорт сценариев
 export {dev}
 export {build}
 export {deployZIP}
-export {ftp}
+// export {ftp}
 
 //Выполнение сценария по умолчанию 
 gulp.task('default',dev);

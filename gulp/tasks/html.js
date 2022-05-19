@@ -1,6 +1,8 @@
 import webpHtmlNosvg from "gulp-webp-html-nosvg";
 import versionNumber from "gulp-version-number";
 import pug from "gulp-pug";
+import fileinclude from "gulp-file-include";
+
 
  export const html = () => {
   return app.gulp.src(app.path.src.html)
@@ -10,6 +12,7 @@ import pug from "gulp-pug";
       message: "Error:<%= error.message %>"
     })
   ))
+  .pipe(fileinclude())
   // .pipe(pug({
   //   pretty: true,//Сжатие Html
   //   verbose: true//Показывать в терминалк какой файл обраьотан 

@@ -1,0 +1,38 @@
+.header-container {
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+		&_numbers {
+      margin-right: 12px;
+		}
+
+		&__phones {
+      ::after{
+        content: url('#Phone');
+       
+      }
+		}
+
+		&__city {
+		}
+}
+.heder-top {
+
+		&__inst {
+		}
+}
+.header-bottom {
+
+		&_nav {
+		}
+
+		&__logo {
+		}
+}
+.header-list {
+
+		&_item {
+		}
+}
+
