@@ -1,7 +1,7 @@
 .header-top__section {
-
+	
 	background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(212, 20, 90, 0.7) 98.16%);
-	padding: 20px 10px 20px 10px;
+	
 }
 
 .header-top__contacts {
@@ -10,50 +10,75 @@
 	font-style: normal;
 	font-weight: 500;
 	font-size: 15px;
-	&_numbers {
-	}
+	color:#FFFFFF;
+	text-align: center;
+	padding-left: 26px;
+	flex-direction: row;
+	align-items: center;
+	padding: 20px 10px 20px 10px;
+}
 
-	& {
-	}
-
-	&__calls {
-	}
-
-	&__city {
-	}
-
-	&__instagram {
+.header-top__city{
+	position: relative;
+	&::after{
+		content:url("../img/icons/icons.svg#map_point");
+		position: absolute;
+		width: 30px;
+		right: 100%;
 	}
 }
-.header-top-phones {
-}
-.header {
 
-	&__svg {
+
+.header-top__instagram {
+	width: 98px;
+	text-align-last: left;
+	font-size: 14px;
+	padding-top: 0;
+	position: relative;
+	&::after{
+		content:url("../img/icons/icons.svg#map_point");
+		position: absolute;
+		width: 30px;
+		right: 100%;
 	}
 }
-.header-yourCity {
-}
+
+
 .header-instagram {
-
+	
 	&_link {
+		font-size: 14px;
 	}
 }
-.header-section {
-}
+
 .header-navbar {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .header-logo {
-
+	width: 220px;
+	height: 60px;
+	display: block;
 	&_link {
 	}
 
 	&_img {
+		min-width: 100%;
 	}
 }
 .header-menu {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 
 	&_list {
+		margin-right: 25px;
+		color:#737373;
+		&:last-child{
+			margin-right: 0px;
+		}
 	}
 }
 

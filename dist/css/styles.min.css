@@ -426,7 +426,6 @@ input {
 
 .header-top__section {
   background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(212, 20, 90, 0.7) 98.16%);
-  padding: 1.25rem 0.625rem 1.25rem 0.625rem;
 }
 
 .header-top__contacts {
@@ -435,7 +434,71 @@ input {
   font-style: normal;
   font-weight: 500;
   font-size: 0.9375rem;
+  color: #FFFFFF;
+  text-align: center;
+  padding-left: 1.625rem;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.25rem 0.625rem 1.25rem 0.625rem;
 }
+
+.header-top__city {
+  position: relative;
+}
+.header-top__city::after {
+  content: url("../img/icons/icons.svg#map_point");
+  position: absolute;
+  width: 1.875rem;
+  right: 100%;
+}
+
+.header-top__instagram {
+  width: 6.125rem;
+  text-align-last: left;
+  font-size: 0.875rem;
+  padding-top: 0;
+  position: relative;
+}
+.header-top__instagram::after {
+  content: url("../img/icons/icons.svg#map_point");
+  position: absolute;
+  width: 1.875rem;
+  right: 100%;
+}
+
+.header-instagram_link {
+  font-size: 0.875rem;
+}
+
+.header-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.header-logo {
+  width: 13.75rem;
+  height: 3.75rem;
+  display: block;
+}
+.header-logo_img {
+  min-width: 100%;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.header-menu_list {
+  margin-right: 1.5625rem;
+  color: #737373;
+}
+.header-menu_list:last-child {
+  margin-right: 0rem;
+}
+
 .header__svg {
   position: relative;
 }
