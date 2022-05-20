@@ -1,38 +1,69 @@
-.header-container {
-}
-.header-top {
-  display: flex;
-  justify-content: space-between;
-		&_numbers {
-      margin-right: 12px;
-		}
+.header-top__section {
 
-		&__phones {
-      ::after{
-        content: url('#Phone');
-       
-      }
-		}
-
-		&__city {
-		}
-}
-.heder-top {
-
-		&__inst {
-		}
-}
-.header-bottom {
-
-		&_nav {
-		}
-
-		&__logo {
-		}
-}
-.header-list {
-
-		&_item {
-		}
+	background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(212, 20, 90, 0.7) 98.16%);
+	padding: 20px 10px 20px 10px;
 }
 
+.header-top__contacts {
+	display: flex;
+	justify-content: space-between;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	&_numbers {
+	}
+
+	& {
+	}
+
+	&__calls {
+	}
+
+	&__city {
+	}
+
+	&__instagram {
+	}
+}
+.header-top-phones {
+}
+.header {
+
+	&__svg {
+	}
+}
+.header-yourCity {
+}
+.header-instagram {
+
+	&_link {
+	}
+}
+.header-section {
+}
+.header-navbar {
+}
+.header-logo {
+
+	&_link {
+	}
+
+	&_img {
+	}
+}
+.header-menu {
+
+	&_list {
+	}
+}
+
+
+.header__svg{
+	position: relative;
+	&::after{
+		content: url("../img/icons/icons.svg#Phone");
+		position: absolute;
+		width: 30px;
+		left: -15%;
+	}
+}

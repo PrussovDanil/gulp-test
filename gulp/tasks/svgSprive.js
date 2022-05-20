@@ -13,6 +13,11 @@ export const svgSprive = () => {
         stack:{
           sprite: `../icons/icons.svg`,
           example: true
+        },
+        css: { // Activate the «css» mode
+          render: {
+            css: true // Activate CSS output (with default options)
+          }
         }
       },
     }))
