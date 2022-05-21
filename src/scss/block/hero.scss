@@ -1,0 +1,39 @@
+.hero {
+
+  &__section { display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    height: 80%;
+    &::before{
+      position: absolute;
+      content: url(../img/rug.png);
+      left: 53%;
+      top: 0%;
+    }
+  }
+
+  &__section-content {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 26px;
+  }
+}
+

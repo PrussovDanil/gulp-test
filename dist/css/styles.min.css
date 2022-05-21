@@ -448,7 +448,7 @@ input {
 .header-top__city::after {
   content: url("../img/icons/icons.svg#map_point");
   position: absolute;
-  width: 1.875rem;
+  width: 2.5rem;
   right: 100%;
 }
 
@@ -460,10 +460,11 @@ input {
   position: relative;
 }
 .header-top__instagram::after {
-  content: url("../img/icons/icons.svg#map_point");
+  content: url("../img/icons/icons.svg#inst-wthite");
   position: absolute;
-  width: 1.875rem;
+  width: 3.75rem;
   right: 100%;
+  top: 12%;
 }
 
 .header-instagram_link {
@@ -507,4 +508,48 @@ input {
   position: absolute;
   width: 1.875rem;
   left: -15%;
+}
+
+.hero__section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 80%;
+}
+.hero__section::before {
+  position: absolute;
+  content: url(../img/rug.png);
+  left: 53%;
+  top: 0%;
+}
+.hero__section-content {
+  width: 100%;
+  max-width: 37.5rem;
+  margin-bottom: 6.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero__title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2.8125rem;
+  margin-bottom: 0.625rem;
+}
+.hero__subtitle {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 1.625rem;
+}
+
+.btn {
+  background: linear-gradient(95.2deg, #B90160 2.23%, #2E3192 99.51%);
+  border-radius: 0.4375rem;
+  padding: 0.9375rem 2.375rem 1rem 2.375rem;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
 }

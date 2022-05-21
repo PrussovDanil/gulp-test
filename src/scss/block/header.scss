@@ -23,7 +23,7 @@
 	&::after{
 		content:url("../img/icons/icons.svg#map_point");
 		position: absolute;
-		width: 30px;
+		width: 40px;
 		right: 100%;
 	}
 }
@@ -36,10 +36,11 @@
 	padding-top: 0;
 	position: relative;
 	&::after{
-		content:url("../img/icons/icons.svg#map_point");
+		content:url("../img/icons/icons.svg#inst-wthite");
 		position: absolute;
-		width: 30px;
+		width: 60px;
 		right: 100%;
+		top: 12%;
 	}
 }
 
