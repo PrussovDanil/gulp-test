@@ -8,15 +8,15 @@
     &::before{
       position: absolute;
       content: url(../img/rug.png);
-      left: 53%;
-      top: 0%;
+      left: 54%;
+      bottom: -15%;
     }
   }
 
   &__section-content {
     width: 100%;
     max-width: 600px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
