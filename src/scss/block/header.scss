@@ -19,6 +19,7 @@
 	flex-direction: row;
 	align-items: center;
 	padding: 20px 10px 20px 10px;
+	
 }
 
 .header-top__city{
@@ -28,6 +29,12 @@
 		position: absolute;
 		width: 40px;
 		right: 100%;
+	}
+}
+
+.header-top__calls{
+	@include tablets{
+		display: none;
 	}
 }
 

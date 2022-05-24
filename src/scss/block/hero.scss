@@ -5,11 +5,28 @@
     align-items: center;
     position: relative;
     height: 80%;
+    
     &::before{
       position: absolute;
-      content: url(../img/rug.png);
-      left: 54%;
-      bottom: -15%;
+      content: '';
+      background-image: url(../img/rug.png);
+      background-size:contain;
+      background-repeat: no-repeat;
+      width: 533px;
+      height: 686px;
+      left: 51%;
+      bottom: -8%;
+      
+      @include tablets{
+        width: 368px;
+        height: 473px;
+        left: 77%;
+        bottom: 16%;
+      }
+    }
+    @include tablets{
+      width: 100%;
+      max-width: 400px;
     }
   }
 
@@ -27,6 +44,12 @@
     font-weight: 900;
     font-size: 45px;
     margin-bottom: 10px;
+    @include tablets{
+     
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
 
   &__subtitle {

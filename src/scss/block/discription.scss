@@ -20,6 +20,10 @@
 
 		&__list {
       display: flex;
+      margin-bottom: 100px;
+      @include tablets{
+         flex-direction: column;
+      }
 		}
 
 		&__item {
@@ -27,6 +31,9 @@
       border-radius: 9px;
       min-width: 200px;
       margin: 0 30px;
+      @include tablets{
+         margin-bottom: 40px ;
+      }
 		}
 
 		&__header {

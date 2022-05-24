@@ -411,6 +411,7 @@ input {
   margin: 0 auto;
   width: 100%;
   max-width: 58.75rem;
+  padding: 0 3.75rem;
 }
 
 @media screen and (max-width: 48em){
@@ -454,6 +455,12 @@ input {
   position: absolute;
   width: 2.5rem;
   right: 100%;
+}
+
+@media screen and (max-width: 48em){
+  .header-top__calls {
+    display: none;
+  }
 }
 
 .header-top__instagram {
@@ -514,6 +521,62 @@ input {
   left: -15%;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 6.25rem 0rem;
+  align-items: baseline;
+}
+.footer__titel {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+.footer__socials-item {
+  width: 3.125rem;
+}
+.footer__socials-img {
+  display: block;
+}
+.footer__numbers {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+.footer__about {
+  width: 13.1875rem;
+}
+.footer__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 0.9375rem;
+}
+.footer__city {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+.footer__block {
+  margin-right: 8.8125rem;
+}
+@media screen and (max-width: 48em){
+  .footer__block {
+    margin-right: 2%;
+  }
+}
+.footer__block:last-child {
+  margin-right: 0rem;
+}
+
 .hero__section {
   display: flex;
   justify-content: flex-start;
@@ -523,9 +586,28 @@ input {
 }
 .hero__section::before {
   position: absolute;
-  content: url(../img/rug.png);
-  left: 54%;
-  bottom: -15%;
+  content: "";
+  background-image: url(../img/rug.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 33.3125rem;
+  height: 42.875rem;
+  left: 51%;
+  bottom: -8%;
+}
+@media screen and (max-width: 48em){
+  .hero__section::before {
+    width: 23rem;
+    height: 29.5625rem;
+    left: 77%;
+    bottom: 16%;
+  }
+}
+@media screen and (max-width: 48em){
+  .hero__section {
+    width: 100%;
+    max-width: 25rem;
+  }
 }
 .hero__section-content {
   width: 100%;
@@ -540,6 +622,13 @@ input {
   font-weight: 900;
   font-size: 2.8125rem;
   margin-bottom: 0.625rem;
+}
+@media screen and (max-width: 48em){
+  .hero__title {
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
 }
 .hero__subtitle {
   font-style: normal;
@@ -569,12 +658,23 @@ input {
 
 .discription__list {
   display: flex;
+  margin-bottom: 6.25rem;
+}
+@media screen and (max-width: 48em){
+  .discription__list {
+    flex-direction: column;
+  }
 }
 .discription__item {
   background: #FFFFFF;
   border-radius: 0.5625rem;
   min-width: 12.5rem;
   margin: 0 1.875rem;
+}
+@media screen and (max-width: 48em){
+  .discription__item {
+    margin-bottom: 2.5rem;
+  }
 }
 .discription__header {
   border-radius: 0.5625rem;
@@ -599,4 +699,70 @@ input {
   line-height: 1rem;
   color: #767676;
   text-align-last: left;
+}
+
+.section-slider {
+  min-height: 12.5rem;
+  background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
+}
+
+.slider__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+@media screen and (max-width: 48em){
+  .slider__list {
+    flex-direction: column;
+    opacity: 1;
+  }
+}
+.slider__item {
+  width: 37.5rem;
+  background: #FFFFFF;
+  box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.5625rem;
+  position: relative;
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
+  opacity: 0.4;
+}
+@media screen and (max-width: 48em){
+  .slider__item {
+    margin: 3.125rem 0;
+    opacity: 1;
+  }
+}
+.slider__header {
+  position: absolute;
+}
+.slider__header--img {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.slider__content {
+  padding: 3.75rem 2.75rem 1.25rem 2.75rem;
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+}
+.slider__line {
+  border: none;
+  height: 0.125rem;
+  width: 8.75rem;
+  margin: 5% 30%;
+  background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
+}
+.slider__autor {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  text-align: center;
+}
+
+.swiper-slide-active {
+  opacity: 1;
 }
